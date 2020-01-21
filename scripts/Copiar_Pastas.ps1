@@ -9,6 +9,6 @@ foreach ($files in @($las_infos, $pdal_infos, $pdal_stats)) {
         if (!(Test-Path -Path $('.\MDS\' + $scm))) {
             New-Item -ItemType directory -Path $('.\MDS\' + $scm)
         }
-        Copy-Item -Path $li.FullName -Destination $('.\MDS\' + $scm + '\' + $f.Name)
+        Copy-Item -Path $f.FullName -Destination $('.\MDS\' + $scm + '\' + $f.Name)
     }
 }
